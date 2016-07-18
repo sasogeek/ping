@@ -1,0 +1,45 @@
+<head>
+  <title>ping</title>
+</head>
+
+<body>
+
+    {{> ping}}
+
+</body>
+
+<template name="ping">
+    <form>
+        <input id="hostname" name="hostname" placeholder="hostname"/>
+        <button type="submit">ping</button>
+    </form>
+    <button id="clear">Clear</button><br/><br/>
+    <table>
+
+        <th>Host</th>
+        <th>Status</th>
+        <th>Response</th>
+        {{#each pings}}
+        <tr>
+            <td style="padding:10px;">{{host}}</td>
+            <td style="padding:10px;">{{status}}</td>
+            <td style="padding:10px;">{{response}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</template>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+  <ul>
+    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+  </ul>
+</template>

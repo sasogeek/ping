@@ -1,0 +1,1 @@
+Pings = new Mongo.Collection('pings');
