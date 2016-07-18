@@ -20,3 +20,8 @@ Template.ping.helpers({
         return Pings.find({});
     }
 });
+
+
+Template.registerHelper('_', function(){
+    return _
+});

@@ -22,7 +22,11 @@
         {{#each pings}}
         <tr>
             <td style="padding:10px;">{{host}}</td>
-            <td style="padding:10px;">{{status}}</td>
+            {{#if _.isEqual status 'Alive'}}
+            <td style="padding:10px; background-color: green;">{{status}}</td>
+            {{else}}
+            <td style="padding:10px; background-color: red;">{{status}}</td>
+            {{/if}}
             <td style="padding:10px;">{{response}}</td>
         </tr>
         {{/each}}
